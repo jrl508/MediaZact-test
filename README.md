@@ -37,7 +37,7 @@ The first component is an input for a string.
 
 The second component accepts a string as a prop and displays it reversed. Eg. “Hello World” becomes “dlroW olleH”.
 
-    The third component contains the first two.
+The third component contains the first two.
 
 Create a React App that accepts two zipcodes and outputs the distance between them in miles. You are NOT allowed to use any external API related to zipcodes or their distances. All zipcodes with their respective lat/lng are at http://federalgovernmentzipcodes.us/.
 
@@ -47,7 +47,7 @@ A component that accepts and validates the input (two zipcodes).
 
 A component that displays the distance in miles.
 
-You will be disqualified if:
+## You will be disqualified if:
 
 The app uses an external library to calculate distance between zipcodes. This means Google Maps, the zipcodes NPM package, or anything else like that. Do your own math.
 
