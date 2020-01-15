@@ -4,9 +4,9 @@
 
 Every day a new frog is born weight 0grams and grows at a rate of 10grams/day, maxing out at 100grams in 10 days
 
-    On day n, what is the total weight of the frog community?
+On day n, what is the total weight of the frog community?
 
-    On day n, what is the average weight of the average frog?
+On day n, what is the average weight of the average frog?
 
 How might we redesign the model to allow for new frogs to be born on a manually set schedule?
 
@@ -32,12 +32,12 @@ For example, if the input array contains values [1, 'a', 'b', 2], after processi
 
 ## React Questions
 
-    Create three components:
-    	The first component is an input for a string.
+Create three components:
+The first component is an input for a string.
 
 The second component accepts a string as a prop and displays it reversed. Eg. “Hello World” becomes “dlroW olleH”.
 
-    	The third component contains the first two.
+    The third component contains the first two.
 
 Create a React App that accepts two zipcodes and outputs the distance between them in miles. You are NOT allowed to use any external API related to zipcodes or their distances. All zipcodes with their respective lat/lng are at http://federalgovernmentzipcodes.us/.
 
