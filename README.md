@@ -1,68 +1,58 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# MediaZact Code Test
 
-## Available Scripts
+## CS Questions:
 
-In the project directory, you can run:
+Every day a new frog is born weight 0grams and grows at a rate of 10grams/day, maxing out at 100grams in 10 days
 
-### `yarn start`
+    On day n, what is the total weight of the frog community?
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    On day n, what is the average weight of the average frog?
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+How might we redesign the model to allow for new frogs to be born on a manually set schedule?
 
-### `yarn test`
+## JavaScript Questions:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Write a function appendRow that appends a table row to the table with ID "tbl". The appended row should have the same number of cells as the last row in that table. For example, after appending a row to the table below, the table should have 2 rows where each row has 2 cells.
 
-### `yarn build`
+```
+<table id="tbl" border="1"> <tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Write an addClickHandler function that registers a click handler and implements the following logic:
+When a button with id "btn" is clicked, it disappears.
+1 second after the click, it reappears.
+Write a function that removes all items that are not numbers from the array. The function should modify the existing array, not create a new one.
+For example, if the input array contains values [1, 'a', 'b', 2], after processing, the array will contain only values [1, 2].
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## React Questions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    Create three components:
+    	The first component is an input for a string.
 
-### `yarn eject`
+The second component accepts a string as a prop and displays it reversed. Eg. “Hello World” becomes “dlroW olleH”.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    	The third component contains the first two.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Create a React App that accepts two zipcodes and outputs the distance between them in miles. You are NOT allowed to use any external API related to zipcodes or their distances. All zipcodes with their respective lat/lng are at http://federalgovernmentzipcodes.us/.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### App must have:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+A component that accepts and validates the input (two zipcodes).
 
-## Learn More
+A component that displays the distance in miles.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You will be disqualified if:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The app uses an external library to calculate distance between zipcodes. This means Google Maps, the zipcodes NPM package, or anything else like that. Do your own math.
 
-### Code Splitting
+### Bonus points:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+The app is hosted and running (GitHub Pages, Heroku free tier, etc. Please don’t spend money on this!).
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+The app is mobile responsive.
