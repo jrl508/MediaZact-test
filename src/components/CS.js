@@ -134,7 +134,99 @@ const CS = () => (
         If the birth rate of frogs is greater than or equal 10 days there will
         never be more than one juvenile at a time
       </li>
+      <li>
+        If the birthrate spans over multiple days at a time the frogs maturity
+        threshold will be later
+      </li>
+      <li>
+        If the frogs are being born at an increased rate, that rate will act as
+        a constant in the original equation
+      </li>
     </ul>
+
+    <p>
+      As I had previously mentioned, that Calculus book was a bit dusty so while
+      coming up with a new equation that will incorporate any birthrate we can
+      use the wizardry of coding
+    </p>
+
+    <p>
+      To approach this we will consider the rate <i>r</i> in units of
+      (frogs/day). As mentioned in our assumptions, if the rate is increased and
+      we have multiple frogs per day, we could just multiply the current
+      equations that we have set up, this is because the birth and growth rate
+      will remain on a daily schedule and the maturity threshold will be reached
+      when originally expected just double or triple the company, this will not
+      be the case with a slowed rate.
+    </p>
+
+    <p>
+      First if we figure out when the first frog will grow into its adult
+      weight, we could use that day as our new threshold. For example if a frog
+      is born every 2 days(r = 1 frog/2 days) and we know that it takes 10 days
+      to reach maturity, it would be safe to say the first frog that is born
+      won't reach maturity until the 12th day. Using that day as a marker we
+      will know when we can separate our age groups.
+    </p>
+
+    <p>
+      Next to determine the number of frogs we will have after <i>n</i> days we
+      just multiply <i>n</i> by the birth rate <i>r</i> to get our community
+      size let's call it <i>c</i>. So following the rate of 1 frog per 2 days,
+      and we want to determine the total weight at n = 15 days, first thing
+      we'll get is the community size. <i>c = r*n ~> 0.5 * 15 = 7.5</i> meaning
+      we have 7 frogs who have at least lived 1 full day since their birth.
+      Since the first frog won't reach maturity until day 12 so we can assess
+      that we have at least 2 frogs at maturity. Base case, a community with 7
+      frogs that we know 2 are mature and 5 are juvenile that looks something
+      like:
+      <br></br>
+      <br></br>c = [0,20,40,60,80,100,100]<br></br>
+      <br></br>
+      We can sum up the juveniles by iterating through and reducing their sum
+      weight and simply add on the total of matured frogs. Since this is only
+      our base case we are not accounting for any days inbetween each birth. In
+      order to do so we will take any remaining days using the modulo (%)
+      operator and add them on during the iterative process. The final product
+      yield:
+    </p>
+    <p>
+      {' '}
+      <code>
+        function totalWeight(n,r=1):
+        <br></br>sum = 0<br></br>
+        juv_sum = 0 <br></br> mat_sum = 0 <br></br>
+        growth_rate = 10 <br></br>
+        community_size = n * r<br></br>
+        if n is less than or equal to 10 and r is equal to or greater than 1:{' '}
+        <br></br> sum = r * (5n<sup>2</sup> - 5n)<br></br>return sum
+        <br></br>
+        else if n is greater than 10 and r is equal to or greater than 1:
+        <br></br>
+        sum = r * (100n - 550)
+        <br></br>return sum <br></br>
+        else:
+        <br></br>
+        mat_size = (n - (growth_rate+(1/r)))/(1/r) juv_size = community_size -
+        mat_size
+        <br></br>for (i = 0; i &lt; juv_size; i++)&#123;<br></br>
+        juv_sum += ((i * (growth_rate/r)) + (growth_rate * ( n % 2)))
+        <br></br>&#125; mat_sum = mat_size * 100 <br></br> sum = mat_sum +
+        juv_sum
+        <br></br> return sum
+      </code>
+    </p>
+    <p>
+      In order to calculate the average weight, we would not change much of the
+      original model except for the fact that it uses the sum function as a
+      nested function so we would need to pass the rate through the parameters.
+    </p>
+    <p>
+      I would like to note that this function seems a bit verbose and there are
+      indeed cleaner alternative approaches such as using array methods to
+      populate, iterate through, and reduce our values. Given the nature of the
+      question I decided to go through a more mathematical approach
+    </p>
   </div>
 );
 
