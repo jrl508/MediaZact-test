@@ -30,6 +30,20 @@ function Javascript() {
       <button id='btn' onClick={() => clickHandler()}>
         Now You See Me
       </button>
+      <h4>
+        Create a function that will filter out any non numbers and return the
+        original array modified
+      </h4>
+
+      <code>
+        let filterNums = (arr) => &#123; <br></br> arr.forEach(element => &#123;{' '}
+        <br></br>
+        let index = arr.indexOf(element);<br></br> if (typeof arr[index] !=
+        'number') &#123;<br></br> arr.splice(index, 1);<br></br> &#125;<br></br>{' '}
+        &#125;);
+        <br></br>
+        return arr;<br></br>&#125;
+      </code>
     </div>
   );
 }

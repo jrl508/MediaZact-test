@@ -23,3 +23,13 @@ export const clickHandler = () => {
     document.getElementById('btn').style.visibility = 'visible';
   }, 1000);
 };
+
+export const filterNums = arr => {
+  arr.forEach(element => {
+    let index = arr.indexOf(element);
+    if (typeof arr[index] != 'number') {
+      arr.splice(index, 1);
+    }
+  });
+  return arr;
+};
