@@ -16,3 +16,10 @@ export const appendRow = () => {
   // append new row element to the end of the table reference
   tblRef.appendChild(newRow);
 };
+
+export const clickHandler = () => {
+  document.getElementById('btn').style.visibility = 'hidden';
+  setTimeout(function() {
+    document.getElementById('btn').style.visibility = 'visible';
+  }, 1000);
+};
