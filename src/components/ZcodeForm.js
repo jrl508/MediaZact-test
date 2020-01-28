@@ -31,6 +31,7 @@ function ZcodeForm() {
         }}>
         <h3>Distance Finder</h3>
         <input
+          className='text-field'
           type='text'
           placeholder='Insert valid zipcode'
           margin='normal'
@@ -38,6 +39,7 @@ function ZcodeForm() {
           onChange={event => setZip1(event.target.value)}
         />
         <input
+          className='text-field'
           type='text'
           placeholder='Insert valid zipcode'
           margin='normal'

@@ -36,7 +36,7 @@
   width: 31%;
   height: 20rem;
 }
-.js-section .card button {
+button {
   position: absolute;
   bottom: 5%;
   background-color: blue;
@@ -47,6 +47,33 @@
   font-size: 1.2rem;
   width: 12rem;
   align-self: center;
+}
+
+.react-section {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.react-section ul {
+  list-style-type: circle;
+}
+
+.react-section form {
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+}
+.react-section .card {
+  background-color: rgb(226, 225, 225);
+  width: 31%;
+  height: 20rem;
+}
+
+.text-field {
+  width: 40%;
+  height: 1.8rem;
+  margin: 10px 0;
+  text-align: center;
 }
 .equation {
   display: flex;

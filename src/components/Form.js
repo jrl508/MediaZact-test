@@ -9,6 +9,7 @@ function Form({ saveString }) {
         saveString(value);
       }}>
       <input
+        className='text-field'
         type='text'
         placeholder='Insert string to be reversed'
         value={value}
