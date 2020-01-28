@@ -1,5 +1,9 @@
 # MediaZact Code Test
 
+## Deployed To:
+
+https://mediazact-test-jrl.netlify.com/
+
 ## CS Questions:
 
 Every day a new frog is born weight 0grams and grows at a rate of 10grams/day, maxing out at 100grams in 10 days
