@@ -1,3 +1,53 @@
+.App {
+  padding: 10px 20px 15px;
+}
+
+.App h1 {
+  text-align: center;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: solid black;
+  height: 2.5rem;
+}
+.navigation a {
+  text-decoration: none;
+  color: darkslategray;
+  font-size: 1.4rem;
+}
+
+.card {
+  box-sizing: border-box;
+  border: solid black;
+  margin: 10px 0;
+  padding: 10px;
+  display: flex;
+  flex-flow: column;
+  position: relative;
+}
+.js-section {
+  display: flex;
+  justify-content: space-between;
+}
+.js-section .card {
+  background-color: rgb(226, 225, 225);
+  width: 31%;
+  height: 20rem;
+}
+.js-section .card button {
+  position: absolute;
+  bottom: 5%;
+  background-color: blue;
+  color: white;
+  border-style: none;
+  border-radius: 6px;
+  height: 2rem;
+  font-size: 1.2rem;
+  width: 12rem;
+  align-self: center;
+}
 .equation {
   display: flex;
   align-items: center;
