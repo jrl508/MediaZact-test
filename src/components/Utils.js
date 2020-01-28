@@ -41,10 +41,10 @@ export function toRads(deg) {
 
 export function calculateDistance(point1, point2) {
   let [lat1, lon1, lat2, lon2] = [
-    parseInt(point1.Lat),
-    parseInt(point1.Long),
-    parseInt(point2.Lat),
-    parseInt(point2.Long)
+    parseFloat(point1.Lat),
+    parseFloat(point1.Long),
+    parseFloat(point2.Lat),
+    parseFloat(point2.Long)
   ];
   var R = 6371000; // metres
   var φ1 = toRads(lat1);
